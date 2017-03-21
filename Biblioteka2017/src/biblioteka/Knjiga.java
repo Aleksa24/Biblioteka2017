@@ -10,8 +10,6 @@ public class Knjiga {
 	private int izdanje;
 	private LinkedList<Autor> autori;
 	
-	
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
