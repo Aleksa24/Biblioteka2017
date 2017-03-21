@@ -2,7 +2,7 @@ package biblioteka;
 
 import java.util.LinkedList;
 
-import biblioteka.interfejs.Autor;
+import biblioteka.Autor;
 import biblioteka.interfejs.BibliotekaInterfejs;
 
 public class Biblioteka implements BibliotekaInterfejs {
@@ -30,8 +30,14 @@ public class Biblioteka implements BibliotekaInterfejs {
 		return knjige;
 	}
 
+	
+	
+	
+
+
+
 	@Override
-	public LinkedList<Knjiga> pronadjiKnjigu(a,isbn,naslov,izdavac) {
+	public LinkedList<Knjiga> pronadjiKnjigu(biblioteka.Autor a, long isbn, String naslov, String izdavac) {
 		if(a == null || isbn == 0 || 
 				naslov == null || izdavac == null){
 			throw new RuntimeException("morate uneti sve");
@@ -44,8 +50,4 @@ public class Biblioteka implements BibliotekaInterfejs {
 			}
 		}
 		return rezultat;
-	}
-	
-	
-
-}
+	}}
