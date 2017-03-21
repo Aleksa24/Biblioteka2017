@@ -2,6 +2,7 @@ package biblioteka;
 
 import java.util.LinkedList;
 
+import biblioteka.interfejs.Autor;
 import biblioteka.interfejs.BibliotekaInterfejs;
 
 public class Biblioteka implements BibliotekaInterfejs {
@@ -10,6 +11,10 @@ public class Biblioteka implements BibliotekaInterfejs {
 	
 	@Override
 	public void dodajKnjigu(Knjiga k) {
+		if (k == null){
+			throw new RuntimeException("null knjiga");
+		}
+		
 		knjige.add(k);
 		
 	}
@@ -22,13 +27,16 @@ public class Biblioteka implements BibliotekaInterfejs {
 
 	@Override
 	public LinkedList<Knjiga> vratiSveKnjige() {
-		// TODO Auto-generated method stub
 		return knjige;
 	}
 
 	@Override
-	public LinkedList<Knjiga> pronadjiKnjigu(String naslov) {
-	
+	public LinkedList<Knjiga> pronadjiKnjigu(a,isbn,naslov,izdavac) {
+		if(a == null || isbn == 0 || 
+				naslov == null || izdavac == null){
+			throw new RuntimeException("morate uneti sve");
+		}
+		
 		LinkedList<Knjiga>	rezultat = new LinkedList<>();
 		for (int i = 0; i < knjige.size(); i++) {
 			if(knjige.get(i).getNaslov().contains(naslov)){
