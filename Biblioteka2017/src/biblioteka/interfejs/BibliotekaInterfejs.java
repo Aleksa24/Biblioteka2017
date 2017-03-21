@@ -6,6 +6,7 @@ import biblioteka.Autor;
 import biblioteka.Knjiga;
 
 public interface BibliotekaInterfejs {
+	
 public void dodajKnjigu(Knjiga k);
 public void brisiKnjigu(Knjiga k);
 public LinkedList<Knjiga> vratiSveKnjige();

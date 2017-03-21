@@ -30,12 +30,6 @@ public class Biblioteka implements BibliotekaInterfejs {
 		return knjige;
 	}
 
-	
-	
-	
-
-
-
 	@Override
 	public LinkedList<Knjiga> pronadjiKnjigu(biblioteka.Autor a, long isbn, String naslov, String izdavac) {
 		if(a == null || isbn == 0 || 
