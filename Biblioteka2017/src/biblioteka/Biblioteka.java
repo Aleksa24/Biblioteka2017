@@ -41,6 +41,7 @@ public class Biblioteka implements BibliotekaInterfejs {
 		for (int i = 0; i < knjige.size(); i++) {
 			if(knjige.get(i).getNaslov().contains(naslov)){
 				rezultat.add(knjige.get(i));
+				// javan komentar
 			}
 		}
 		return rezultat;
